@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram/pages/home_page.dart';
 import 'package:flutter_instagram/pages/signUp_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -59,19 +60,20 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     SizedBox(height: 10,),
-                    Container(margin: EdgeInsets.symmetric(horizontal: 20),
-                      height: 45,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                     border: Border.all(
-                       width: 1,color: Colors.white.withOpacity(0.4)
-                     )
+                    GestureDetector(onTap: (){
+                      Navigator.pushReplacementNamed(context, HomePage.id);
+                    },
+                      child: Container(margin: EdgeInsets.symmetric(horizontal: 20),
+                        height: 45,
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
+                       border: Border.all(
+                         width: 1,color: Colors.white.withOpacity(0.4)
+                       )
 
-
-
-
-                     // color: Colors.white.withOpacity(0)
+                       // color: Colors.white.withOpacity(0)
+                        ),
+                        child: Center(child: Text('Sign In',style: TextStyle(color: Colors.white),)),
                       ),
-                      child: Center(child: Text('Sign In',style: TextStyle(color: Colors.white),)),
                     )
             ],)),
             
